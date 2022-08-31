@@ -18,7 +18,7 @@ https://code-console.cerner.com/console/apps
 
 ## Step 2: Create an OAuth Lab App
 
-Make sure its a DSTU2 app with all patient and user resources selected
+Make sure its a DSTU2 Provider app with all patient and user resources selected
 - Redirect URI
 https://authz-demo.cerner.com/client/demo/cb
 - Launch URI
@@ -249,7 +249,6 @@ as part of the authorization exchange.
 
 ## Step 1: Prepare an authorization request with the openid scope
 
-- Visit the following URL: https://authz-demo.cerner.com/client/demo?iss=https%3A%2F%2Ffhir-ehr-code.cerner.com%2Fdstu2%2Fec2458f2-1e24-41c8-b71b-0e701af7583d
 - In section "1" of the demo application, click "Discover Authorization URLs".
 - In section "2" of the demo application, enter the scopes "user/Patient.read openid"
 
