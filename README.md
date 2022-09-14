@@ -118,7 +118,7 @@ a protected service.
 
 ## Step 1: Submit an Authorization Request
 
-- Repeat steps 1-4 of Lab 1.
+- Repeat steps 5-8 of Lab 1.
 
 ## Step 2: Submit a token request
 
@@ -143,7 +143,7 @@ a protected service.
 
 ## Step 1: Submit an authorization request
 
-- Repeat steps 1-4 of Lab 1.
+- Repeat steps 5-8 of Lab 1.
 
 ## Step 2: Submit a token request
 
