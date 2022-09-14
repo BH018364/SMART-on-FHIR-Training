@@ -251,6 +251,7 @@ as part of the authorization exchange.
 
 - In section "1" of the demo application, click "Discover Authorization URLs".
 - In section "2" of the demo application, enter the scopes "user/Patient.read openid"
+- In section "2" of the demo application, remove the launch code
 
 ## Step 2: Submit the authorization request
 
