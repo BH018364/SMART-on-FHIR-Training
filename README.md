@@ -19,6 +19,7 @@ https://code-console.cerner.com/console/apps
 ## Step 2: Create an OAuth Lab App
 
 Make sure its an R4 Provider app with all patient and user resources selected
+- Make sure to use Smart V1
 - Redirect URI
 https://authz-demo.cerner.com/client/demo/cb
 - Launch URI
