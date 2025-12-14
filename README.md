@@ -18,7 +18,8 @@ https://code-console.cerner.com/console/apps
 
 ## Step 2: Create an OAuth Lab App
 
-Make sure its a DSTU2 Provider app with all patient and user resources selected
+Make sure its an R4 Provider app with all patient and user resources selected
+- Make sure to use Smart V1
 - Redirect URI
 https://authz-demo.cerner.com/client/demo/cb
 - Launch URI
@@ -61,7 +62,7 @@ authorization server.
 - Launch Code:	    (varies)
   - For now, copy, save for later, and delete from this field
 
-- Aud:              https://fhir-ehr-code.cerner.com/dstu2/ec2458f2-1e24-41c8-b71b-0e701af7583d
+- Aud:              https://fhir-ehr-code.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d
   - This is the base URL hosting the services that will be accessed.
   - The authorization server verifies this is a URL known to it, as 
     to prevent you from accidentally sending tokens to a malicious party.
@@ -129,7 +130,7 @@ a protected service.
 - In the demo application, locate the field named "Resource Server"
   section 4 "Access protected resource"
   - Enter the value:
-    https://fhir-ehr-code.cerner.com/dstu2/ec2458f2-1e24-41c8-b71b-0e701af7583d/Patient/12507980
+    https://fhir-ehr-code.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Patient/12507980
 - Click "Access Protected Resource"
 
 ## Step 4: Tamper with the access token
@@ -153,7 +154,7 @@ a protected service.
 
 - In the demo application, locate the field named "Resource Server" in section 4 "Access protected resource"
   - Enter the value:
-    https://fhir-ehr-code.cerner.com/dstu2/ec2458f2-1e24-41c8-b71b-0e701af7583d/Practitioner/593923
+    https://fhir-ehr-code.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Practitioner/593923
 - Submit the Request
   - Note the "403" error response code (the scopes requested did not include the Practitioner resource.)
 
@@ -183,7 +184,7 @@ a FHIR(R) Conformance document.
 ## Step 2: Discover endpoints via the conformance document
 
 - In section "1" of the demo application, enter the following value for "FHIR Base URL"
-  - https://fhir-ehr-code.cerner.com/dstu2/ec2458f2-1e24-41c8-b71b-0e701af7583d
+  - https://fhir-ehr-code.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d
 - Click "Discover Authorization URLs"
 
 ## Step 3: Confirm discovery succeeded
@@ -206,7 +207,7 @@ _Note_: This lab requires a launch code (saved in Lab 1 Step 5) for the patient 
 
 _Note_: The callback URL for the demo app will be similar to the following:
 
-- https://authz-demo.cerner.com/client/demo?iss=https%3A%2F%2Ffhir-ehr-code.cerner.com%2Fdstu2%2Fec2458f2-1e24-41c8-b71b-0e701af7583d&launch=43713f6e-ee06-4ed2-8327-8744e04531c1
+- https://authz-demo.cerner.com/client/demo?iss=https%3A%2F%2Ffhir-ehr-code.cerner.com%2Fr4%2Fec2458f2-1e24-41c8-b71b-0e701af7583d&launch=43713f6e-ee06-4ed2-8327-8744e04531c1
 
 ## Step 2: Perform discovery
 
@@ -227,14 +228,14 @@ _Note_: The callback URL for the demo app will be similar to the following:
 
 - In the demo application, locate the field named "Resource Server" section 4 "Access protected resource".
   - Enter the value:
-    https://fhir-ehr-code.cerner.com/dstu2/ec2458f2-1e24-41c8-b71b-0e701af7583d/Patient/12724069
+    https://fhir-ehr-code.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Patient/12724069
 - Click "Access Protected Resource"
 
 ## Step 6: Request a different patient record
 
 - In the demo application, locate the field named "Resource Server" section 4 "Access protected resource".
   - Enter the value:
-    https://fhir-ehr-code.cerner.com/dstu2/ec2458f2-1e24-41c8-b71b-0e701af7583d/Patient/12724071
+    https://fhir-ehr-code.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Patient/12724071
 - Click "Access Protected Resource"
 - Note Access is Denied (Status = 403).
 - Switch the scopes to "user/Patient.read launch", then click "Get Authorization Code".
@@ -365,7 +366,7 @@ error page with more information.
 ## Step 3: Submit a new authorization request
 
 - In section "2" of the demo application, replace the value of "aud" with the following:
-  - https://fhir-ehr-code.cerner.com/dstu2/ec2458f2-1e24-41c8-b71b-0e701af7583d
+  - https://fhir-ehr-code.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d
 - Click "Get Authorization Code"
 
 ## Step 4: Submit a token request, twice
